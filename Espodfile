@@ -1,0 +1,6 @@
+{
+	"project_name" : "ESP32_AQM1248A",
+	"dependencies" : {
+		"thunderclap" : "1.0.0"
+	}
+}

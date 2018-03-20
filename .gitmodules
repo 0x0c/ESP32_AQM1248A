@@ -1,0 +1,3 @@
+[submodule "components/FreeRTOS-cpp_task"]
+	path = components/FreeRTOS-cpp_task
+	url = git@github.com:0x0c/FreeRTOS-cpp_task.git
