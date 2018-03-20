@@ -151,12 +151,12 @@ namespace ESP32
 				device_config.spics_io_num = cs;
 				device_config.flags = 0;
 				device_config.queue_size = 1;
-				device_config.pre_cb = &LCD::spi_pre_transfer_callback;
-				device_config.post_cb = &LCD::spi_post_transfer_callback;
+				device_config.pre_cb = NULL;
+				device_config.post_cb = NULL;
 
 				// HSPI_HOST = 1, ///< SPI2, HSPI
 				// VSPI_HOST = 2 ///< SPI3, VSPI
-				assert(spi_bus_initialize(host, &bus_config, 1) == ESP_OK);
+				assert(spi_bus_initialize(host, &bus_config, host) == ESP_OK);
 				//Attach the LCD to the SPI bus
 				assert(spi_bus_add_device(host, &device_config, &spi) == ESP_OK);
 
